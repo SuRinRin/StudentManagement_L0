@@ -53,7 +53,7 @@ namespace StudentManagement.Controller
         public Student GetStudentById()
         {
             string studentId = input.GetStudentId();
-            Student student = _listStudents.SingleOrDefault(s => s.StudentId == studentId);
+            Student student = _listStudents.FirstOrDefault(s => s.StudentId == studentId);
             if (student == null)
             {
                 Console.WriteLine($"Student with Id {studentId} not found!");
